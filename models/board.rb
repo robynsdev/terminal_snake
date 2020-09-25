@@ -1,6 +1,6 @@
 # board area is 21 x 30 ? double spaced
 class Board
-  attr_accessor :board
+  attr_accessor :board, :score
 
   def initialize
     @score = 0
@@ -37,8 +37,16 @@ class Board
         row = row.map { |element| element.nil? ? '  ' : element }
         row.join
     end
+    puts
     puts rows.join("\n")
-    puts "Score: #{score}"
+    puts "Score: #{@score}"
+    puts
+    puts "Controls are w - up, a - left, s - down, d - right"
     puts "Press 'q' to quit"
+    puts
   end
 end
+
+# to test board:
+board = Board.new
+board.print_board

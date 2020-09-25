@@ -43,14 +43,12 @@
 require_relative 'views/title'
 require_relative 'views/get_name'
 require_relative 'controllers/start_game'
-require_relative 'models/board'
-require_relative 'models/snake'
 require_relative 'controllers/snake_controller'
 
-board = Board.new
-snake = Snake.new
+
 
 title
 get_name
 start_game
+# high_score
 
