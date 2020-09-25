@@ -22,8 +22,8 @@ def game
   snake = Snake.new
   food = Food.new
   
+  food.insert_food(board)
   board.print_board
-  # food.insert_food
 
 
 end
