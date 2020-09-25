@@ -23,6 +23,7 @@ def game
   food = Food.new
   
   board.print_board
+  # food.insert_food
 
 
 end

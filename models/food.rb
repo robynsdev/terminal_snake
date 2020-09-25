@@ -1,7 +1,8 @@
 class Food
-  def initialize
-    @food = '⚪️'
-  end  
+
+  # def initialize
+  #   @food = '⚪️'
+  # end  
 
   # randomise food location within board
   def rand_x
@@ -14,10 +15,10 @@ class Food
 
 
   def insert_food
-    if board.board[1][1] == nil
-      board.board[seg[0]].insert(seg[1], '⚪️')
-      board.board[seg[0]].delete_at(seg[1]-1)
-    end
+    # if board.board[1][1] == nil
+    board.board[seg[0]].insert(seg[1], '⚪️')
+    board.board[seg[0]].delete_at(seg[1]-1)
+    # end
   end
 
 end
