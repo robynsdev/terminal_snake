@@ -31,11 +31,29 @@
 # print top 5 scores 
 
 
-⚉
-⚈
-⚆
-⚇
-🟣🟣🟣
-🟪🟪🟪
+# ⚉
+# ⚈
+# ⚆
+# ⚇
+# 🟣🟣🟣
+# 🟪🟪🟪
 
-⚪️🔲🔳⬜️◻️◽️▫️
+# ⚪️🔲🔳⬜️◻️◽️▫️
+
+require_relative 'models/board'
+require_relative 'models/snake'
+
+board = Board.new
+board.print_board
+
+# now = Time.now
+# counter = 0.1
+# loop do
+#   if Time.now < now + counter
+#     next
+#   else
+#     puts "counting another #{counter} ..."
+#   end
+#   counter += 0.3
+#   break if counter > 30
+# end

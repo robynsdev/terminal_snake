@@ -54,44 +54,42 @@ end
 
 
 
-body_segs = [[10, 10], [10, 11], [10, 12]]
+body = [[10, 10], [10, 11], [10, 12]]
 
-body_segs.each do |seg|
+body.each do |seg|
   board[seg[0]].insert(seg[1], "🟣")
   board[seg[0]].delete_at(seg[1]-1)
 end
 print_board(board)
 
-
-# head = gets.chomp.downcase
 
 
 case STDIN.getch
 when "w"
-  body_segs.unshift([body_segs[0][0]-1, body_segs[0][1]])
-  body_segs.delete_at(-1)
+  body.unshift([body[0][0]-1, body[0][1]])
+  body.delete_at(-1)
 when "a"
-  body_segs.unshift([body_segs[0][0], body_segs[0][1]-1])
-  body_segs.pop
+  body.unshift([body[0][0], body[0][1]-1])
+  body.pop
 when "s"
-  body_segs.unshift([body_segs[0][0]+1, body_segs[0][1]])
-  body_segs.pop
+  body.unshift([body[0][0]+1, body[0][1]])
+  body.pop
 when "d"
-  body_segs.unshift([body_segs[0][0], body_segs[0][1]+1])
-  body_segs.pop
+  body.unshift([body[0][0], body[0][1]+1])
+  body.pop
+when "q"
+  break
 end
 
 def tail
-  board[body_segs[-1][0]].insert(body_segs[-1][1], nil)
-  board[body_segs[-1][0]].delete_at(body_segs[-1][1]+1)
+  board[body[-1][0]].insert(body[-1][1], nil)
+  board[body[-1][0]].delete_at(body[-1][1]+1)
 end 
 
-p body_segs
+system('clear')
 
-body_segs.each do |seg|
+body.each do |seg|
   board[seg[0]].insert(seg[1], "🟣")
   board[seg[0]].delete_at(seg[1]-1)
 end
 print_board(board)
-
-p body_segs
