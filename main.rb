@@ -40,20 +40,17 @@
 
 # ⚪️🔲🔳⬜️◻️◽️▫️
 
+require_relative 'views/title'
+require_relative 'views/get_name'
+require_relative 'controllers/start_game'
 require_relative 'models/board'
 require_relative 'models/snake'
+require_relative 'controllers/snake_controller'
 
 board = Board.new
-board.print_board
+snake = Snake.new
 
-# now = Time.now
-# counter = 0.1
-# loop do
-#   if Time.now < now + counter
-#     next
-#   else
-#     puts "counting another #{counter} ..."
-#   end
-#   counter += 0.3
-#   break if counter > 30
-# end
+title
+get_name
+start_game
+

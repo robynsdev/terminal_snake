@@ -3,6 +3,7 @@ class Board
   attr_accessor :board
 
   def initialize
+    @score = 0
     @board = 
       [
         ['🔳' * 31],
@@ -37,5 +38,7 @@ class Board
         row.join
     end
     puts rows.join("\n")
+    puts "Score: #{score}"
+    puts "Press 'q' to quit"
   end
 end
