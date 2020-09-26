@@ -11,7 +11,7 @@ def game
   #     system("clear")
   #   end
   #   counter += 1
-  #   break if counter > 10
+  #   break if counter > 5
   # end
 
   require_relative '../models/board'
@@ -23,9 +23,20 @@ def game
   food = Food.new
   
   food.insert_food(board)
+  snake.insert_snake(board)
   board.print_board
 
-
+  # now = Time.now
+  # counter = 0
+  # loop do
+  #   if Time.now < now + counter
+  #     next
+  #   else
+  #     board.print_board
+  #   end
+  #   counter += 1
+  #   break if counter > 3
+  # end
 end
 
 game
