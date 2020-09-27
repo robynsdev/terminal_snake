@@ -1,16 +1,34 @@
 require 'io/console'
+require '../models/snake'
+
 
 def snake_controller
   case STDIN.getch
   when "w"
-    ::Snake.move_up
+    # snake.move_up(board, food)
+    @move = [0, -1] if @move != [0, 1]
   when "a"
-    ::Snake.move_left
+    @move = [-1, 0] if @move != [1, 0]
   when "s"
-    ::Snake.move_down
+    @move = [0, 1] if @move != [0, -1]
   when "d"
-    ::Snake.move_right
+    @move = [1, 0] if @move != [-1, 0]
   when "q"
     puts "the end"
   end
 end
+
+# def snake_controller
+#   case STDIN.getch
+#   when "w"
+#     snake.move_up(board, food)
+#   when "a"
+#     snake.move_left
+#   when "s"
+#     snake.move_down
+#   when "d"
+#     snake.move_right
+#   when "q"
+#     puts "the end"
+#   end
+# end

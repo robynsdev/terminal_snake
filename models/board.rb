@@ -45,7 +45,8 @@ class Board
     puts
   end
 end
+# printf("\033[H\033[J");
 
 # to test board:
-# board = Board.new
-# board.print_board
+board = Board.new
+board.print_board

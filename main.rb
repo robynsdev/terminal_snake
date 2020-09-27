@@ -43,7 +43,6 @@
 require_relative 'views/title'
 require_relative 'views/get_name'
 require_relative 'controllers/start_game'
-require_relative 'controllers/snake_controller'
 
 
 
